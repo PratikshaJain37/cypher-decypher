@@ -12,7 +12,7 @@ def home():
     return render_template('home.html')
 
 
-types_of_cyphers = ['Additive', 'Multiplicative', 'Hill Digraph']
+encryption_cyphers = ['Additive', 'Multiplicative', 'Hill Digraph']
 @app.route("/encryption")
 def encryption():
     return render_template('encryption.html')
