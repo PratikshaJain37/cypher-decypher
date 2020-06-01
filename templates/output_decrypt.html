@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+    <ul>
+    {% for key,value in output.items(): %}
+         <li> Output for Key {{key}} is {{value}} </li>
+
+
+    {% endfor %}
+    </ul>
+
+
+
+
+
+
+
+
+{% endblock %}
