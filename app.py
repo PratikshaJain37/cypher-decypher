@@ -55,7 +55,7 @@ def d_additive2():
 
 @app.route('/encryption/multiplicative_cypher')
 def e_multipicative():
-    return render_template('input_encrypt.html', type_pf_cypher = 'multiplicative')
+    return render_template('input_encrypt.html', type_of_cypher = 'multiplicative')
 
 @app.route('/encryption/multiplicative_cypher', methods=['POST'])
 def e_multipicative2():
