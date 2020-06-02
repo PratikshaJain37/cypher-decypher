@@ -20,7 +20,7 @@ def datacleaning(inputtext):
 def additive_encrypt(ip,key):
     output = ''
     for i in ip:
-        output += chr(((ord(i)-97+key)%26 + 97))
+        output += chr((ord(i)-97+key)%26 + 97)
     return output
 
 def additive_decrypt(ip):
@@ -28,7 +28,7 @@ def additive_decrypt(ip):
     for key in range(0,26):
         output = ''
         for i in ip:
-            output += chr(((ord(i)-97+key)%26 + 97))
+            output += chr((ord(i)-97+key)%26 + 97)
             
         dec[26-key] = output
             
