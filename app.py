@@ -5,6 +5,8 @@ from helpers.additive import *
 from helpers.multiplicative import *
 from helpers.hilldigraph import *
 
+from data import Articles
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -82,7 +84,7 @@ def d_multiplicative2():
 
 
 
-
+Articles = Articles()
 
 @app.route('/encryption/hilldigraph_cypher')
 def e_hilldigraph():
@@ -107,8 +109,14 @@ def e_hilldigraph2():
         return render_template('output_encrypt.html',IsValidKey = False)
 
 
+@app.route('/articles')
+def articles():
+    return render_template('articles.html', articles=Articles)
 
+@app.route('/article/<string:id>')
+def article(id):
+    return render_template('article.html', id=id)
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
